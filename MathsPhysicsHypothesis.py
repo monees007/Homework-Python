@@ -2,16 +2,57 @@ mathsMarks = [68,62,57,42,87,71,81,84,74,63,64,97,52,65,89,76,87,62,72,56,93,78,
 physicsMarks = [64,45,54,53,64,92,82,92,64,88,72,92,64,73,62,58,86,81,92,78,68,69,62,91,72,75,71,76,83,66]
 chemMarks = [78,91,77,78,89,84,87,76,51,73,68,92,71,89,93,90,43,67,97,62,91,74,57,88,58,92,82,52,83,81]
 
-def ListInList(p):
-    i = 0
-    Class = []
-    for q in p:
-        Student = [i,q]
-        i= i + 1
-        Class = Class + [Student]
-        Student = []
-    return(Class)
+from shortcutsj import *
 
 MathLIL = ListInList(mathsMarks)
 PhysicsLIL = ListInList(physicsMarks)
 ChemLIL = ListInList(chemMarks)
+
+# Sorting the marks in decending order
+
+SortedMaths = invertList(sortListinL(MathLIL))
+SortedPhysics = invertList(sortListinL(PhysicsLIL))
+
+# Assigning the grades
+
+MathsA=assignGrade(SortedMaths,'A')
+MathsB=assignGrade(SortedMaths,'B')
+MathsC=assignGrade(SortedMaths,'C')
+
+PhysicsA=assignGrade(SortedPhysics,'A')
+PhysicsB=assignGrade(SortedPhysics,'B')
+PhysicsC=assignGrade(SortedPhysics,'C')
+
+# If same or higher grade in physics as in Maths 
+def CheckThesis():
+    AGraders=['AGraders']
+    BGraders=['BGraders']
+    CGraders=['CGraders']
+    for p in MathsA:
+        for q in PhysicsA:
+            if first(p)==first(q):
+                AGraders = AGraders + ['true']
+            else:
+                AGraders = AGraders + ['false'] 
+    for p in MathsB:
+        for q in PhysicsA+PhysicsB:
+            if first(p)==first(q):
+                BGraders = BGraders + ['true']
+            else:
+                BGraders = BGraders + ['false']
+    for p in MathsC:
+        for q in PhysicsA+PhysicsB+PhysicsC:
+            if first(p)==first(q):
+                CGraders = CGraders + ['true']
+            else:
+                CGraders = CGraders + ['false']
+    print(AGraders)
+    print(BGraders)
+    print(CGraders)
+
+# Returns
+print(MathsA)
+print(MathsB)
+print(MathsC)
+CheckThesis()
+#print(assignGrade(SortedMaths))
