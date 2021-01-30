@@ -25,34 +25,28 @@ PhysicsC=assignGrade(SortedPhysics,'C')
 
 # If same or higher grade in physics as in Maths 
 def CheckThesis():
-    AGraders=['AGraders']
-    BGraders=['BGraders']
-    CGraders=['CGraders']
+    AGraders=[]
+    BGraders=[]
     for p in MathsA:
         for q in PhysicsA:
             if first(p)==first(q):
-                AGraders = AGraders + ['true']
-            else:
-                AGraders = AGraders + ['false'] 
+                AGraders = AGraders + ['T']
+             
     for p in MathsB:
         for q in PhysicsA+PhysicsB:
             if first(p)==first(q):
-                BGraders = BGraders + ['true']
-            else:
-                BGraders = BGraders + ['false']
-    for p in MathsC:
-        for q in PhysicsA+PhysicsB+PhysicsC:
-            if first(p)==first(q):
-                CGraders = CGraders + ['true']
-            else:
-                CGraders = CGraders + ['false']
+                BGraders = BGraders + ['t']
     print(AGraders)
     print(BGraders)
-    print(CGraders)
+    print('Supporters')
+    print(len(AGraders)+len(BGraders))
+    print('over')
+    print(30)
+    print('It means')
+    percent=len(AGraders)+len(BGraders)*100/30
+    print(percent) 
+  
 
 # Returns
-print(MathsA)
-print(MathsB)
-print(MathsC)
 CheckThesis()
 #print(assignGrade(SortedMaths))
