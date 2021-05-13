@@ -5,3 +5,4 @@ This is just my homework...Dont take serious.
 * Starting Week 2.
 * PPA GPA released.
 * Week 2 finished.
+* Side Project 'To find all index of a char in string'
