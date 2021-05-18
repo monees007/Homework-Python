@@ -7,3 +7,4 @@ This is just my homework...Dont take serious.
 * Week 2 finished.
 * Side Project 'To find all index of a char in string'
 * Side Project 'Polygon with Turtle'
+* Week 3 Started, PPA, GrPA released.
