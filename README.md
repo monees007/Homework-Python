@@ -6,3 +6,4 @@ This is just my homework...Dont take serious.
 * PPA GPA released.
 * Week 2 finished.
 * Side Project 'To find all index of a char in string'
+* Side Project 'Polygon with Turtle'
