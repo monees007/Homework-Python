@@ -1,0 +1,14 @@
+import turtle
+
+# You don't need to worry about these lines
+t = turtle.Turtle()
+t.shape('turtle')
+t.color('blue')
+
+# Draw an required polygon
+n = int(input())
+a = 360 / n
+while n > 0:
+    t.forward(100)
+    t.left(a)
+    n -= 1
