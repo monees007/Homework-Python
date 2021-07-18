@@ -10,3 +10,7 @@ This is just my homework...Dont take serious.
 * Week 3 Started, PPA, GrPA released.
 * Week 3 finished, for graded purpose.
 * PyPOD added as clone.
+* PyPOD removed.
+* Week 4-9 finished.
+* template maker created.
+* Starting Week 10
